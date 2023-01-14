@@ -3,13 +3,13 @@
 /* font inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-/* variables */
+/* -----variables----- */
 :root{
     --primary-font:'Poppins', sans-serif;
     --secondary-font:'Inter', sans-serif;
     --color-1:#3A3A3A;
 }
-/* common designs */
+/* -----common designs----- */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,12 +17,12 @@
     font-family: var(--primary-font);
 }
 
-/* header start */
+/* -----header start----- */
 .header{
     margin: 87px 120px 0;
 }
 
-/*navigation bar start*/
+/* -----navigation bar start----- */
 .menu{
     display: none;
 }
@@ -47,9 +47,9 @@
     font-size: 16px;
     font-weight: 600;
 }
-/*navigation bar end*/
+/* -----navigation bar end----- */
 
-/* banner start */
+/* -----banner start----- */
 .banner{
     margin: 42px 0 69px;
     display: flex;
@@ -100,17 +100,41 @@
     height: 414px;
     display: block;
 }
-/* banner end */
+/* -----banner end----- */
+/* -----header end----- */
 
 
-/* small device <576px */
+/* -----main start----- */
+
+/* -----brands section start----- */
+.brands{
+    margin: 0 165px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 35px 65px;
+}
+.brands ul{
+    list-style-type: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(7,1fr);
+    column-gap: 61px;
+}
+.brands li img{
+    max-width: 100%;
+}
+/* -----brands section end----- */
+
+
+/* ----------small device <576px---------- */
 @media only screen and (max-width:576px){
-    /* header start */
+    /* -----header start----- */
     .header{
         margin: 35px 16px 0;
     }
 
-    /* nav start */
+    /* -----nav start----- */
     .menu{
         display: block;
     }
@@ -125,9 +149,9 @@
         font-size: 16px;
         padding: 0;
     }
-    /* nav end */
+    /* -----nav end----- */
 
-    /* banner start */
+    /* -----banner start----- */
     .banner{
         margin: 22px 0 50px;
         display: flex;
@@ -160,4 +184,42 @@
         font-weight: 500;
         width: 80%;
     }
+    /* -----banner end----- */
+    /* -----header end----- */
+
+
+    /* -----main start----- */
+
+    .brands{
+        margin: 50px 42px 0;
+        border: none;
+        padding: 0;
+    }
+    .brands ul{
+        /* margin: 0; */
+        list-style-type: none;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* border: 1px soli; */
+        /* column-gap: 2rem; */
+        gap: 1rem 2rem;
+        grid-template-areas: 
+                            "alibaba alibaba alibaba amazon  amazon amazon daraz  daraz  daraz   ebay    ebay    ebay"
+                            "   .    rakuten rakuten rakuten target target target target walmart walmart walmart ."
+        ;
+    }
+    .brands li img{
+        /* max-width: 100%; */
+        max-height: 100%;
+    }
+    .alibaba{grid-area: alibaba;}
+    .amazon{grid-area: amazon;}
+    .daraz{grid-area: daraz;}
+    .ebay{grid-area: ebay;}
+    .rakuten{grid-area: rakuten;}
+    .target{grid-area: target;}
+    .walmart{grid-area: walmart;}
+
 }
